@@ -50,7 +50,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("reservas")?.scrollIntoView()}
+              onClick={() => document.getElementById("reservas")?.scrollIntoView({ behavior: "smooth" })}
             >
               <Calendar className="h-4 w-4" />
               <span>Reservas</span>
@@ -58,7 +58,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("profesores")?.scrollIntoView()}
+              onClick={() => document.getElementById("profesores")?.scrollIntoView({ behavior: "smooth" })}
             >
               <Users className="h-4 w-4" />
               <span>Profesores</span>
@@ -66,7 +66,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("alumnos")?.scrollIntoView()}
+              onClick={() => document.getElementById("alumnos")?.scrollIntoView({ behavior: "smooth" })}
             >
               <BookOpen className="h-4 w-4" />
               <span>Alumnos</span>
@@ -74,7 +74,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("eventos")?.scrollIntoView()}
+              onClick={() => document.getElementById("eventos")?.scrollIntoView({ behavior: "smooth" })}
             >
               <CalendarDays className="h-4 w-4" />
               <span>Eventos</span>
@@ -82,7 +82,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("simulacion")?.scrollIntoView()}
+              onClick={() => document.getElementById("simulacion")?.scrollIntoView({ behavior: "smooth" })}
             >
               <Cube className="h-4 w-4" />
               <span>Simulación 3D</span>
@@ -90,7 +90,7 @@ export default function Home() {
             <Button
               variant="ghost"
               className="flex items-center gap-1"
-              onClick={() => document.getElementById("blog")?.scrollIntoView()}
+              onClick={() => document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" })}
             >
               <BookOpen className="h-4 w-4" />
               <span>Blog</span>
@@ -98,7 +98,7 @@ export default function Home() {
             <Button
               variant="default"
               className="bg-green-600 hover:bg-green-700"
-              onClick={() => document.getElementById("contacto")?.scrollIntoView()}
+              onClick={() => document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })}
             >
               Contacto
             </Button>
@@ -130,7 +130,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("reservas")?.scrollIntoView()
+                  document.getElementById("reservas")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -141,7 +141,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("profesores")?.scrollIntoView()
+                  document.getElementById("profesores")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -152,7 +152,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("alumnos")?.scrollIntoView()
+                  document.getElementById("alumnos")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -163,7 +163,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("eventos")?.scrollIntoView()
+                  document.getElementById("eventos")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -174,7 +174,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("simulacion")?.scrollIntoView()
+                  document.getElementById("simulacion")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -185,7 +185,7 @@ export default function Home() {
                 variant="ghost"
                 className="flex items-center justify-start gap-1"
                 onClick={() => {
-                  document.getElementById("blog")?.scrollIntoView()
+                  document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -196,7 +196,7 @@ export default function Home() {
                 variant="default"
                 className="bg-green-600 hover:bg-green-700"
                 onClick={() => {
-                  document.getElementById("contacto")?.scrollIntoView()
+                  document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" })
                   setMobileMenuOpen(false)
                 }}
               >
@@ -229,10 +229,16 @@ export default function Home() {
                 Aprende con los mejores profesionales y mejora tu técnica en nuestras instalaciones de primer nivel
               </p>
               <div className="mt-8">
-                <button className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                <button
+                  className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                  onClick={() => document.getElementById("reservas")?.scrollIntoView({ behavior: "smooth" })}
+                >
                   Reserva una clase
                 </button>
-                <button className="ml-4 bg-white hover:bg-gray-100 text-green-600 font-bold py-3 px-6 rounded-lg transition-colors">
+                <button
+                  className="ml-4 bg-white hover:bg-gray-100 text-green-600 font-bold py-3 px-6 rounded-lg transition-colors"
+                  onClick={() => document.getElementById("profesores")?.scrollIntoView({ behavior: "smooth" })}
+                >
                   Conoce más
                 </button>
               </div>
